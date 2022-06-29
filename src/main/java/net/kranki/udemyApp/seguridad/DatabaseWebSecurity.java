@@ -2,6 +2,7 @@
 package net.kranki.udemyApp.seguridad;
 
 import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- *
- * @author gogle
+ * @author Oscar Rodriguez
  */
 @Configuration
 @EnableWebSecurity

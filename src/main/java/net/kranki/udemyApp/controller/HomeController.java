@@ -43,17 +43,6 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/detalle")
-    public String mostrarDetalle(Model model) {
-        Vacante vacante = new Vacante();
-        vacante.setNombre("ingeniero de software");
-        vacante.setDescripcion("se solicita inge de soporte");
-        vacante.setFecha(new Date());
-        vacante.setSalario(9700.0);
-        model.addAttribute("vacante", vacante);
-        return "detalle";
-    }
-
     @GetMapping("/tabla")
     public String mostrarTabla(Model model) {
         List<Vacante> lista = iVacantesService.buscarTodos();

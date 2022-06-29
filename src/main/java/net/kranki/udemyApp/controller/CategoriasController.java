@@ -1,7 +1,7 @@
 package net.kranki.udemyApp.controller;
 
-import java.util.List;
-
+import net.kranki.udemyApp.model.Categoria;
+import net.kranki.udemyApp.service.ICategoriasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import net.kranki.udemyApp.model.Categoria;
-import net.kranki.udemyApp.service.ICategoriasService;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/categorias")
@@ -19,6 +18,7 @@ public class CategoriasController {
     @Autowired
     private ICategoriasService iCategoriasService;
 
+    //pagina principal
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String mostrarIndex(Model model) {
         List<Categoria> listCategoria = iCategoriasService.buscarTodas();
